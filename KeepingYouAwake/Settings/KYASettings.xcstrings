@@ -130,6 +130,12 @@
             "value" : "关于"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -240,7 +246,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "激活时长"
+            "value" : "保持运行时长"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持运行时长"
           }
         },
         "zh-Hant" : {
@@ -377,7 +389,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "高级设置"
+            "value" : "高级"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高级"
           }
         },
         "zh-Hant" : {
@@ -512,6 +530,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "电池"
@@ -654,6 +678,12 @@
             "value" : "通用"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通用"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -788,7 +818,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "KeepingYouAwake – 偏好设置"
+            "value" : "常醒 – 设置"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常醒 – 设置"
           }
         },
         "zh-Hant" : {
@@ -899,6 +935,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "更新"

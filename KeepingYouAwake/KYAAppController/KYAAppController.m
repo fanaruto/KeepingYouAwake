@@ -22,6 +22,8 @@
 @property (nonatomic, readwrite) KYASleepWakeTimer *sleepWakeTimer;
 @property (nonatomic, readwrite) KYAStatusItemController *statusItemController;
 @property (nonatomic) KYAActivationDurationsMenuController *menuController;
+@property (nonatomic) KYAClamshellSession *clamshellSession;
+@property (nonatomic) BOOL changingClamshellMode;
 
 @property (nonatomic) NSTimeInterval workspaceScheduledTimeInterval;
 
@@ -41,6 +43,11 @@
     self = [super init];
     if(self)
     {
+        self.clamshellSession = [KYAClamshellSession new];
+        [NSNotificationCenter.defaultCenter addObserver:self
+                                               selector:@selector(clamshellSessionDidStop:)
+                                                   name:KYAClamshellSessionDidStopNotification
+                                                 object:self.clamshellSession];
         [self configureStatusItemController];
         [self configureSleepWakeTimer];
         [self configureEventHandler];
@@ -72,6 +79,7 @@
     [center removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
     [center removeObserver:self name:NSApplicationDidChangeScreenParametersNotification object:nil];
     [center removeObserver:self name:kKYABatteryCapacityThresholdDidChangeNotification object:nil];
+    [center removeObserver:self name:KYAClamshellSessionDidStopNotification object:self.clamshellSession];
     
     [self unregisterFromWorkspaceSessionNotifications];
 }
@@ -85,6 +93,140 @@
     self.menuController = menuController;
     
     self.menu = KYACreateMainMenuWithActivationDurationsSubMenu(menuController.menu);
+
+    Auto keepRunning = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Keep Running", nil)
+                                                action:@selector(toggleKeepRunning:)
+                                         keyEquivalent:@""];
+    keepRunning.target = self;
+    [self.menu insertItem:keepRunning atIndex:0];
+
+    Auto displayOff = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Keep Running and Turn Display Off", nil)
+                                               action:@selector(keepRunningAndTurnDisplayOff:)
+                                        keyEquivalent:@""];
+    displayOff.target = self;
+    displayOff.image = [NSImage imageWithSystemSymbolName:@"display" accessibilityDescription:nil];
+    [self.menu insertItem:displayOff atIndex:1];
+
+    Auto closedLid = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Enable Closed-Lid Mode…", nil)
+                                              action:@selector(toggleClosedLidMode:)
+                                       keyEquivalent:@""];
+    closedLid.target = self;
+    closedLid.image = [NSImage imageWithSystemSymbolName:@"laptopcomputer" accessibilityDescription:nil];
+    closedLid.toolTip = NSLocalizedString(@"Administrator authorization is required. Normal sleep settings are restored when this app exits.", nil);
+    [self.menu insertItem:closedLid atIndex:2];
+    [self.menu insertItem:NSMenuItem.separatorItem atIndex:3];
+
+    Auto project = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Open Project Page", nil)
+                                            action:@selector(openProjectPage:)
+                                     keyEquivalent:@""];
+    project.target = self;
+    [self.menu insertItem:project atIndex:self.menu.numberOfItems - 2];
+}
+
+- (BOOL)validateMenuItem:(NSMenuItem *)item
+{
+    if(item.action == @selector(toggleKeepRunning:))
+    {
+        item.title = [self.sleepWakeTimer isScheduled]
+            ? NSLocalizedString(@"Stop Keeping Awake", nil) : NSLocalizedString(@"Keep Running", nil);
+    }
+    if(item.action == @selector(toggleClosedLidMode:))
+    {
+        item.title = self.clamshellSession.restorationRequired ? NSLocalizedString(@"Retry Restoring System Sleep…", nil) : self.clamshellSession.active
+            ? NSLocalizedString(@"Disable Closed-Lid Mode", nil) : NSLocalizedString(@"Enable Closed-Lid Mode…", nil);
+        item.state = (self.clamshellSession.active || self.clamshellSession.restorationRequired) ? NSControlStateValueOn : NSControlStateValueOff;
+    }
+    else if(self.clamshellSession.restorationRequired && item.action != @selector(openProjectPage:)) { return NO; }
+    return !self.changingClamshellMode;
+}
+
+- (IBAction)toggleKeepRunning:(id)sender
+{
+    if([self.sleepWakeTimer isScheduled])
+    {
+        [self terminateTimer];
+    }
+    else
+    {
+        [self activateTimerWithTimeInterval:KYASleepWakeTimeIntervalIndefinite];
+    }
+}
+
+- (IBAction)keepRunningAndTurnDisplayOff:(id)sender
+{
+    NSUserDefaults.standardUserDefaults.kya_allowDisplaySleep = YES;
+    // Restart caffeinate so a previous display-awake assertion is released.
+    [self.sleepWakeTimer invalidate];
+    [self activateTimerWithTimeInterval:KYASleepWakeTimeIntervalIndefinite];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC / 2), dispatch_get_main_queue(), ^{
+        Auto task = [NSTask new];
+        task.executableURL = [NSURL fileURLWithPath:@"/usr/bin/pmset"];
+        task.arguments = @[@"displaysleepnow"];
+        task.terminationHandler = ^(NSTask *finished) {
+            if(finished.terminationStatus != 0)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self showPowerError:nil title:NSLocalizedString(@"Display Sleep Failed", nil)];
+                });
+            }
+        };
+        NSError *error = nil;
+        if(![task launchAndReturnError:&error])
+        {
+            [self showPowerError:error title:NSLocalizedString(@"Display Sleep Failed", nil)];
+        }
+    });
+}
+
+- (IBAction)toggleClosedLidMode:(id)sender
+{
+    if(self.changingClamshellMode) { return; }
+    self.changingClamshellMode = YES;
+    Auto completion = ^(NSError *error) {
+        self.changingClamshellMode = NO;
+        if(error)
+        {
+            [self showPowerError:error title:NSLocalizedString(@"Closed-Lid Mode Failed", nil)];
+        }
+        else if(self.clamshellSession.active)
+        {
+            NSUserDefaults.standardUserDefaults.kya_allowDisplaySleep = YES;
+            [self.sleepWakeTimer invalidate];
+            [self activateTimerWithTimeInterval:KYASleepWakeTimeIntervalIndefinite];
+        }
+    };
+    if(self.clamshellSession.active || self.clamshellSession.restorationRequired)
+    {
+        [self.clamshellSession stopWithCompletion:completion];
+    }
+    else
+    {
+        [self.clamshellSession startWithCompletion:completion];
+    }
+}
+
+- (void)showPowerError:(NSError *)error title:(NSString *)title
+{
+    Auto alert = [NSAlert new];
+    alert.messageText = title;
+    alert.informativeText = error.localizedDescription ?: NSLocalizedString(@"Your Mac is still being kept awake. Turn off the display from macOS or try again.", nil);
+    [alert runModal];
+}
+
+- (IBAction)openProjectPage:(id)sender
+{
+    [NSWorkspace.sharedWorkspace openURL:[NSURL URLWithString:@"https://github.com/fanaruto/KeepingYouAwake"]];
+}
+
+- (void)clamshellSessionDidStop:(NSNotification *)notification
+{
+    NSError *error = notification.userInfo[NSUnderlyingErrorKey];
+    // A pending user action reports its own result through its completion.
+    if(error && !self.changingClamshellMode)
+    {
+        if(!self.clamshellSession.restorationRequired) { [self.sleepWakeTimer invalidate]; }
+        [self showPowerError:error title:NSLocalizedString(@"Closed-Lid Mode Failed", nil)];
+    }
 }
 
 #pragma mark - Status Item Controller
@@ -128,9 +270,14 @@
     Auto defaults = NSUserDefaults.standardUserDefaults;
     
     Auto timerCompletion = ^(BOOL cancelled) {
+        // Restarting a session should not emit a stale "stopped" notification.
+        if(cancelled && [self.sleepWakeTimer isScheduled]) { return; }
         // Post deactivation notification
         Auto notification = [[KYAActivationUserNotification alloc] initWithFireDate:nil activating:NO];
         [KYAUserNotificationCenter.sharedCenter postNotification:notification];
+
+        // A timed closed-lid session must restore lid sleep when its timer ends.
+        if(!cancelled && self.clamshellSession.active) { [self terminateTimer]; }
 
         // Quit on timer expiration
         if(cancelled == NO && [defaults kya_isQuitOnTimerExpirationEnabled])
@@ -148,6 +295,19 @@
 
 - (void)terminateTimer
 {
+    if(self.clamshellSession.restorationRequired) { return; }
+    if(self.clamshellSession.active)
+    {
+        self.changingClamshellMode = YES;
+        [self.clamshellSession stopWithCompletion:^(NSError *error) {
+            self.changingClamshellMode = NO;
+            if(error)
+                [self showPowerError:error title:NSLocalizedString(@"Closed-Lid Mode Failed", nil)];
+            else
+                [self terminateTimer];
+        }];
+        return;
+    }
     [self disableBatteryOverride];
 
     if([self.sleepWakeTimer isScheduled])
@@ -230,6 +390,7 @@
 
 - (void)enableDevicePowerMonitoring
 {
+    [self disableDevicePowerMonitoring];
     Auto device = KYADevice.currentDevice;
     Auto center = NSNotificationCenter.defaultCenter;
     Auto defaults = NSUserDefaults.standardUserDefaults;
@@ -339,8 +500,8 @@
     
     [eventHandler registerActionNamed:@"deactivate" block:^(KYAEvent *event) {
         Auto strongSelf = weakSelf;
+        if(strongSelf.changingClamshellMode) { return; }
         [strongSelf terminateTimer];
-        strongSelf.statusItemController.appearance = KYAStatusItemAppearanceInactive;
     }];
     
     [eventHandler registerActionNamed:@"toggle" block:^(KYAEvent *event) {
@@ -351,12 +512,16 @@
 
 - (void)handleActivateActionForEvent:(KYAEvent *)event
 {
+    if(self.changingClamshellMode) { return; }
     Auto parameters = event.arguments;
     NSString *seconds = parameters[@"seconds"];
     NSString *minutes = parameters[@"minutes"];
     NSString *hours = parameters[@"hours"];
 
-    [self terminateTimer];
+    // Replacing the idle timer keeps the independently authorized lid session.
+    // Natural timer expiration will stop that session; no asynchronous stop races
+    // with the new timer here.
+    [self.sleepWakeTimer invalidate];
     
     Auto statusItemController = self.statusItemController;
 
@@ -421,6 +586,15 @@
 
 - (NSMenu *)menuForStatusItemController:(KYAStatusItemController *)controller
 {
+    for(NSMenuItem *item in self.menu.itemArray)
+    {
+        if(item.submenu != nil)
+        {
+            item.enabled = !self.changingClamshellMode;
+            for(NSMenuItem *duration in item.submenu.itemArray)
+                duration.enabled = !self.changingClamshellMode;
+        }
+    }
     return self.menu;
 }
 
@@ -428,6 +602,7 @@
 
 - (void)statusItemControllerShouldPerformPrimaryAction:(KYAStatusItemController *)controller
 {
+    if(self.changingClamshellMode) { return; }
     if([self.sleepWakeTimer isScheduled])
     {
         [self terminateTimer];
@@ -454,7 +629,8 @@
 
 - (void)activationDurationsMenuController:(KYAActivationDurationsMenuController *)controller didSelectActivationDuration:(KYAActivationDuration *)activationDuration
 {
-    [self terminateTimer];
+    if(self.changingClamshellMode) { return; }
+    [self.sleepWakeTimer invalidate];
 
     AutoWeak weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{

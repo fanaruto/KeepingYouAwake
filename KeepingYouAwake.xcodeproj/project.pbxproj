@@ -101,7 +101,6 @@
 		DAD9834C26F8BB0500234FB8 /* KYAUpdateSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD9834E26F8BB0500234FB8 /* KYAUpdateSettingsViewController.xib */; };
 		DAD9838A26F9037900234FB8 /* KYADurationSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD9838C26F9037900234FB8 /* KYADurationSettingsViewController.xib */; };
 		DAD983A726F9C46600234FB8 /* KYAAddDurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD983A926F9C46600234FB8 /* KYAAddDurationViewController.xib */; };
-		DAEF160C277C67D800EA9478 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = DAEF160B277C67D800EA9478 /* Sparkle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA52096C27C6C9BD00ECFDA6 /* KYAApplicationSupport in Frameworks */,
-				DAEF160C277C67D800EA9478 /* Sparkle in Frameworks */,
 				DA51CA672BB75A0B0013175E /* KYACommon in Frameworks */,
 				DACF2FC927C2657C00856FEC /* KYAUserNotifications in Frameworks */,
 				DA25063227C248710052CCD8 /* KYADeviceInfo in Frameworks */,
@@ -596,7 +594,6 @@
 			);
 			name = "KeepingYouAwake (Direct)";
 			packageProductDependencies = (
-				DAEF160B277C67D800EA9478 /* Sparkle */,
 				DA25063127C248710052CCD8 /* KYADeviceInfo */,
 				DACF2FC827C2657C00856FEC /* KYAUserNotifications */,
 				DACF2FCA27C271B600856FEC /* KYAApplicationEvents */,
@@ -648,6 +645,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				"zh-Hans",
 				en,
 				Base,
 				de,
@@ -674,7 +672,6 @@
 			);
 			mainGroup = DA637B3019F14693004C8838;
 			packageReferences = (
-				DAEF160A277C67D800EA9478 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = DA637B3A19F14693004C8838 /* Products */;
 			projectDirPath = "";
@@ -1032,7 +1029,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 5KESHV9W85;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KeepingYouAwake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1055,7 +1052,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 5KESHV9W85;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KeepingYouAwake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1086,7 +1083,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 5KESHV9W85;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KYALauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1095,7 +1092,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.KeepingYouAwake.Launcher";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.webfooo.Changxing.Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1120,7 +1117,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 5KESHV9W85;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KYALauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1129,7 +1126,7 @@
 				);
 				MTL_FAST_MATH = YES;
 				OTHER_CODE_SIGN_FLAGS = "$(inherited) --timestamp";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.KeepingYouAwake.Launcher";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.webfooo.Changxing.Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1145,11 +1142,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 5KESHV9W85;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
-					"KYA_APP_UPDATER_ENABLED=1",
+					"KYA_APP_UPDATER_ENABLED=0",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = KeepingYouAwake/Info.plist;
@@ -1174,10 +1171,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 5KESHV9W85;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"KYA_APP_UPDATER_ENABLED=1",
+					"KYA_APP_UPDATER_ENABLED=0",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = KeepingYouAwake/Info.plist;
@@ -1234,16 +1231,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		DAEF160A277C67D800EA9478 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sparkle-project/Sparkle";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		DA25062F27C2486D0052CCD8 /* KYADeviceInfo */ = {
@@ -1309,11 +1296,6 @@
 		DACF2FCC27C271BA00856FEC /* KYAApplicationEvents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = KYAApplicationEvents;
-		};
-		DAEF160B277C67D800EA9478 /* Sparkle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAEF160A277C67D800EA9478 /* XCRemoteSwiftPackageReference "Sparkle" */;
-			productName = Sparkle;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

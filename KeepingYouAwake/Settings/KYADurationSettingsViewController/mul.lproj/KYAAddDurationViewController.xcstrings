@@ -104,7 +104,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "时"
+            "value" : "小时"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小时"
           }
         },
         "zh-Hant" : {
@@ -221,6 +227,12 @@
             "value" : "取消"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -270,6 +282,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : ""
@@ -380,7 +398,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "分"
+            "value" : "分钟"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分钟"
           }
         },
         "zh-Hant" : {
@@ -497,6 +521,12 @@
             "value" : "秒"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秒"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -608,7 +638,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "添加时间"
+            "value" : "添加时长"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加时长"
           }
         },
         "zh-Hant" : {

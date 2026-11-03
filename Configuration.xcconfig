@@ -7,13 +7,15 @@
 //
 
 MACOSX_DEPLOYMENT_TARGET = 12.0
-PRODUCT_BUNDLE_IDENTIFIER = info.marcel-dierkes.KeepingYouAwake
+PRODUCT_BUNDLE_IDENTIFIER = com.webfooo.Changxing
 
-MARKETING_VERSION = 1.6.9
-CURRENT_PROJECT_VERSION = 1060900
+MARKETING_VERSION = 1.7.0
+CURRENT_PROJECT_VERSION = 1070000
 
 GENERATE_INFOPLIST_FILE = YES
 INFOPLIST_KEY_LSApplicationCategoryType = public.app-category.utilities
 INFOPLIST_KEY_NSPrincipalClass = NSApplication
 INFOPLIST_KEY_NSMainNibFile = MainMenu
 INFOPLIST_KEY_NSHumanReadableCopyright = Copyright © 2014 – 2026 Marcel Dierkes. All rights reserved.
+
+INFOPLIST_KEY_CFBundleDisplayName = 常醒

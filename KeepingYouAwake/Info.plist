@@ -12,10 +12,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>KeepingYouAwake</string>
+			<string>Changxing</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>keepingyouawake</string>
+				<string>changxing</string>
 			</array>
 		</dict>
 	</array>
@@ -25,11 +25,7 @@
 	<false/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUEnableInstallerLauncherService</key>
-	<true/>
-	<key>SUEnableDownloaderService</key>
-	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>常醒需要通过系统授权开启合盖持续运行，并在结束时恢复原来的睡眠设置。</string>
 </dict>
 </plist>

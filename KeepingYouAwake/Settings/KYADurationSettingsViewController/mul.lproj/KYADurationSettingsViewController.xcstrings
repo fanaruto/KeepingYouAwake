@@ -107,6 +107,12 @@
             "value" : "删除"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -218,7 +224,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "点击菜单栏图标会使用默认的激活时长。"
+            "value" : "点按菜单栏图标时，将使用默认的保持运行时长。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点按菜单栏图标时，将使用默认的保持运行时长。"
           }
         },
         "zh-Hant" : {
@@ -332,7 +344,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "设置为默认"
+            "value" : "设为默认"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设为默认"
           }
         },
         "zh-Hant" : {
@@ -446,7 +464,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "重置..."
+            "value" : "重置…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置…"
           }
         },
         "zh-Hant" : {
@@ -558,6 +582,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "删除"
@@ -677,6 +707,12 @@
             "value" : "添加"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -788,7 +824,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "设置为默认"
+            "value" : "设为默认"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设为默认"
           }
         },
         "zh-Hant" : {

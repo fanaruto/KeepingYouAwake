@@ -98,7 +98,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开系统通知设置..."
+            "value" : "通知设置…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知设置…"
           }
         },
         "zh-Hant" : {
@@ -236,7 +242,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在开启时立刻阻止睡眠模式运行。"
+            "value" : "打开应用后立即保持 Mac 运行。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开应用后立即保持 Mac 运行。"
           }
         },
         "zh-Hant" : {
@@ -377,6 +389,12 @@
             "value" : "退出"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -512,7 +530,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在你的 Mac 开启时自动打开此软件。"
+            "value" : "登录 Mac 时自动打开此应用。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录 Mac 时自动打开此应用。"
           }
         },
         "zh-Hant" : {
@@ -650,7 +674,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在登录时开启"
+            "value" : "登录时启动"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录时启动"
           }
         },
         "zh-Hant" : {
@@ -788,7 +818,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在启动时开启"
+            "value" : "启动时保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动时保持运行"
           }
         },
         "zh-Hant" : {

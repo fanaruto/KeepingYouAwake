@@ -131,6 +131,12 @@
             "value" : "自动检查更新"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动检查更新"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -266,7 +272,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "检查预发行版本更新"
+            "value" : "检查预发布版本"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查预发布版本"
           }
         },
         "zh-Hant" : {
@@ -404,7 +416,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "现在检查"
+            "value" : "立即检查"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立即检查"
           }
         },
         "zh-Hant" : {

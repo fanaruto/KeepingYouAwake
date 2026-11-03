@@ -94,6 +94,12 @@
             "value" : "（默认）"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "（默认）"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -222,7 +228,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "激活时长"
+            "value" : "定时保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定时保持运行"
           }
         },
         "zh-Hant" : {
@@ -305,7 +317,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "当外接显示器连接时激活"
+            "value" : "连接外接显示器时保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连接外接显示器时保持运行"
           }
         },
         "zh-Hant" : {
@@ -400,7 +418,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在这之后 Mac 会在闲置时自动进入休眠状态。"
+            "value" : "结束后，Mac 将恢复为空闲时自动睡眠。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "结束后，Mac 将恢复为空闲时自动睡眠。"
           }
         },
         "zh-Hant" : {
@@ -495,7 +519,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "允许显示器休眠"
+            "value" : "允许屏幕熄灭"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许屏幕熄灭"
           }
         },
         "zh-Hant" : {
@@ -590,7 +620,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "允许休眠"
+            "value" : "已停止保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已停止保持运行"
           }
         },
         "zh-Hant" : {
@@ -689,6 +725,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
@@ -823,7 +865,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "点按以允许进入睡眠模式 右击以显示菜单"
+            "value" : "点按以停止保持运行\n右键点按以显示菜单"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点按以停止保持运行\n右键点按以显示菜单"
           }
         },
         "zh-Hant" : {
@@ -955,7 +1003,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "点按以防止进入睡眠模式 右击以显示菜单"
+            "value" : "点按以保持运行\n右键点按以显示菜单"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点按以保持运行\n右键点按以显示菜单"
           }
         },
         "zh-Hant" : {
@@ -1032,7 +1086,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "切换用户时结束防止休眠"
+            "value" : "切换用户时停止保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "切换用户时停止保持运行"
           }
         },
         "zh-Hant" : {
@@ -1136,6 +1196,12 @@
             "value" : "默认"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1234,7 +1300,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您确定要将时长列表重置为默认值？"
+            "value" : "要将保持运行时长恢复为默认值吗？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要将保持运行时长恢复为默认值吗？"
           }
         },
         "zh-Hant" : {
@@ -1365,7 +1437,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "无限期"
+            "value" : "持续运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "持续运行"
           }
         },
         "zh-Hant" : {
@@ -1448,7 +1526,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "好的"
+            "value" : "确定"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确定"
           }
         },
         "zh-Hant" : {
@@ -1543,7 +1627,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "防止休眠"
+            "value" : "正在保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在保持运行"
           }
         },
         "zh-Hant" : {
@@ -1638,7 +1728,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在%@内防止休眠"
+            "value" : "保持运行 %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持运行 %@"
           }
         },
         "zh-Hant" : {
@@ -1772,6 +1868,12 @@
             "value" : "退出"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1870,7 +1972,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "当防止休眠结束时退出应用程序"
+            "value" : "保持运行结束时退出应用"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持运行结束时退出应用"
           }
         },
         "zh-Hant" : {
@@ -1971,7 +2079,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "重置时长列表"
+            "value" : "重置保持运行时长"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置保持运行时长"
           }
         },
         "zh-Hant" : {
@@ -2072,7 +2186,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "将%@设置为默认"
+            "value" : "设为默认：%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设为默认：%@"
           }
         },
         "zh-Hant" : {
@@ -2203,7 +2323,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "偏好设置..."
+            "value" : "设置…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置…"
           }
         },
         "zh-Hant" : {
@@ -2304,7 +2430,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "输入的时长无效，请重试。"
+            "value" : "时长无效，请重新输入。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时长无效，请重新输入。"
           }
         },
         "zh-Hant" : {
@@ -2405,7 +2537,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "时长已存在。"
+            "value" : "此时长已添加。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此时长已添加。"
           }
         },
         "zh-Hant" : {
@@ -2539,6 +2677,12 @@
             "value" : "版本"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2631,7 +2775,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您仍然可以手动让 Mac 进入休眠状态。"
+            "value" : "仍可从 macOS 菜单手动让 Mac 睡眠。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仍可从 macOS 菜单手动让 Mac 睡眠。"
           }
         },
         "zh-Hant" : {
@@ -2726,13 +2876,287 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在闲置时 Mac 会自动休眠。"
+            "value" : "Mac 将恢复为空闲时自动睡眠。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 将恢复为空闲时自动睡眠。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "系統將於閒置時進入睡眠狀態"
+          }
+        }
+      }
+    },
+    "Keep Running and Turn Display Off" : {
+      "comment" : "Keep Running and Turn Display Off",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持运行并熄屏"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持运行并熄屏"
+          }
+        }
+      }
+    },
+    "Keep Running" : {
+      "comment" : "Keep Running",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "持续运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "持续运行"
+          }
+        }
+      }
+    },
+    "Stop Keeping Awake" : {
+      "comment" : "Stop Keeping Awake",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止保持运行"
+          }
+        }
+      }
+    },
+    "Open-Lid Mode" : {
+      "comment" : "Open-Lid Mode",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开盖运行模式"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开盖运行模式"
+          }
+        }
+      }
+    },
+    "Display Sleep Failed" : {
+      "comment" : "Display Sleep Failed",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "熄屏失败"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "熄屏失败"
+          }
+        }
+      }
+    },
+    "Your Mac is still being kept awake. Turn off the display from macOS or try again." : {
+      "comment" : "Your Mac is still being kept awake. Turn off the display from macOS or try again.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 仍在保持运行。请重试熄屏，或在 macOS 中关闭显示器。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 仍在保持运行。请重试熄屏，或在 macOS 中关闭显示器。"
+          }
+        }
+      }
+    },
+    "Enable Closed-Lid Mode…" : {
+      "comment" : "Enable Closed-Lid Mode…",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启合盖持续运行…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启合盖持续运行…"
+          }
+        }
+      }
+    },
+    "Disable Closed-Lid Mode" : {
+      "comment" : "Disable Closed-Lid Mode",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭合盖持续运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭合盖持续运行"
+          }
+        }
+      }
+    },
+    "Closed-Lid Mode Failed" : {
+      "comment" : "Closed-Lid Mode Failed",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖模式操作失败"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖模式操作失败"
+          }
+        }
+      }
+    },
+    "Closed-Lid Mode Active" : {
+      "comment" : "Closed-Lid Mode Active",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖持续运行已开启"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖持续运行已开启"
+          }
+        }
+      }
+    },
+    "Closed-Lid Mode Inactive" : {
+      "comment" : "Closed-Lid Mode Inactive",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖持续运行已关闭"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖持续运行已关闭"
+          }
+        }
+      }
+    },
+    "Administrator authorization is required. Normal sleep settings are restored when this app exits." : {
+      "comment" : "Administrator authorization is required. Normal sleep settings are restored when this app exits.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要管理员授权。退出应用后将恢复原来的睡眠设置。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要管理员授权。退出应用后将恢复原来的睡眠设置。"
+          }
+        }
+      }
+    },
+    "Open Project Page" : {
+      "comment" : "Open Project Page",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "项目与使用说明"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "项目与使用说明"
+          }
+        }
+      }
+    },
+    "Closed-Lid Mode" : {
+      "comment" : "Closed-Lid Mode",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖持续运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合盖持续运行"
+          }
+        }
+      }
+    },
+    "Retry Restoring System Sleep…" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重试恢复系统睡眠…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重试恢复系统睡眠…"
           }
         }
       }

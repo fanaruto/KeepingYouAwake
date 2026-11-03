@@ -131,6 +131,12 @@
             "value" : "低电量模式"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低电量模式"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -260,7 +266,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在电池容量低时停用"
+            "value" : "电池电量低于以下值时停止保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池电量低于以下值时停止保持运行"
           }
         },
         "zh-Hant" : {
@@ -384,6 +396,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 %"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "10 %"
@@ -524,7 +542,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "当你在电池容量低于此值时手动开启此软件，这个值会被忽略。"
+            "value" : "电量低于此值时，仍可手动开启保持运行。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电量低于此值时，仍可手动开启保持运行。"
           }
         },
         "zh-Hant" : {
@@ -653,6 +677,12 @@
             "value" : "90 %"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "90 %"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -734,7 +764,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在低电量模式下关闭"
+            "value" : "开启低电量模式时停止保持运行"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启低电量模式时停止保持运行"
           }
         },
         "zh-Hant" : {
@@ -858,6 +894,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50 %"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "50 %"
@@ -1001,6 +1043,12 @@
             "value" : "电池电量"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池电量"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1081,8 +1129,14 @@
         },
         "zh" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "在支持低电量模式的 Mac 上可通过系统设置 › 电池中开启，充电时不适用。"
+            "state" : "translated",
+            "value" : "支持此功能的 Mac 可在“系统设置 › 电池”中开启低电量模式。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持此功能的 Mac 可在“系统设置 › 电池”中开启低电量模式。"
           }
         },
         "zh-Hant" : {

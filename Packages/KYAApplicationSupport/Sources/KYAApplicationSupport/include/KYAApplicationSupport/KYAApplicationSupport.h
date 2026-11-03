@@ -11,3 +11,4 @@
 #import <KYAApplicationSupport/NSBundle+KYAVersion.h>
 #import <KYAApplicationSupport/NSUserDefaults+KYAKeys.h>
 #import <KYAApplicationSupport/KYADisplayParameters.h>
+#import <KYAApplicationSupport/KYAClamshellSession.h>

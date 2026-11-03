@@ -128,7 +128,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "重置为初始状态"
+            "value" : "恢复默认设置"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复默认设置"
           }
         },
         "zh-Hant" : {
@@ -156,6 +162,12 @@
           }
         },
         "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : ""
@@ -291,7 +303,13 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "请只在了解如下设置的前提下修改。大多数设置都需要重启此软件才能生效。"
+            "value" : "修改前请确认各项设置的作用。多数设置需重启应用后生效。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "修改前请确认各项设置的作用。多数设置需重启应用后生效。"
           }
         },
         "zh-Hant" : {
